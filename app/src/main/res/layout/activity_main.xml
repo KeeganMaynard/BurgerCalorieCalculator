@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,9 +16,8 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/topbun"
         android:contentDescription="@string/app_name" />
 
@@ -30,9 +28,8 @@
         android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true">
 
         <RadioButton
             android:id="@+id/radio0"
@@ -60,9 +57,8 @@
         android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_centerHorizontal="true"
         android:text="@string/prosciutto" />
 
     <!-- RADIO GROUP CONTAINING -->
@@ -72,9 +68,8 @@
         android:id="@+id/radioGroup2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/checkBox1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/checkBox1"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal" >
 
         <RadioButton
@@ -99,9 +94,8 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="@string/sauce"
         android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -112,10 +106,9 @@
         android:id="@+id/seekBar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
         android:layout_alignLeft="@+id/radioGroup2"
         android:layout_alignRight="@+id/radioGroup2"
-        />
+        android:layout_below="@+id/textView1" />
 
     <!-- BURGER BUN BOTTOM -->
 
@@ -123,9 +116,8 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/bottombun"
         android:contentDescription="@string/app_name" />
@@ -136,11 +128,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="29dp"
         android:text="@string/calorie"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
